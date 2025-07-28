@@ -21,7 +21,7 @@ gsutil acl ch -u AllUsers:R gs://hadock404-models/tokenizer_roberta.zip
 ## Construire et pousser l'image sur Cloud Run
 
 ```bash
-gcloud builds submit --tag gcr.io/hadock404-project/api-emoxion
+gcloud builds submit --tag gcr.io/hadock404-project/api-youtube
 ```
 
 ## Vérifier que l'image est bien disponible
@@ -33,8 +33,8 @@ gcloud container images list
 ## Déployer sur Cloud Run
 
 ```bash
-gcloud run deploy api-emoxion \
-  --image gcr.io/hadock404-project/api-emoxion \
+gcloud run deploy api-youtube \
+  --image gcr.io/hadock404-project/api-youtube \
   --platform managed \
   --region northamerica-northeast1 \
   --allow-unauthenticated \
@@ -43,4 +43,4 @@ gcloud run deploy api-emoxion \
 
 ## Adresse
 
-Service URL: https://api-emoxion-782672784164.northamerica-northeast1.run.app/docs
+Service URL: https://api-youtube-782672784164.northamerica-northeast1.run.app/docs
